@@ -1,7 +1,8 @@
 <?php 
 require_once $PathApp . '/Extras/GetController.php';
+require_once $PathApp . '/Extras/autoload.php';
 
-//Definimos la ruta del controlador que estaremos llamado.
+//Definimos la ruta del controlador que estaremos llamado mediante la url.
 $ControllerFile = $PathApp . '/App/Htpp/' . $Controller . '.php';
 
 if(!file_exists($ControllerFile)){ die($Warning_Message['WN-NF-001'] . $ControllerFile); }
@@ -14,5 +15,5 @@ $Controller = new $Controller();
 
 if(!method_exists($Controller,$Method)){die($Warning_Message['WN-MT-001']);}
 
-$Controller->{$Method}($Param);
+$Controller->{$Method}($Params);
 ?>
