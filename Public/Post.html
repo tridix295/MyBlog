@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Assets/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/3a534a140c.js" crossorigin="anonymous"></script>
+    <script src="./Assets/js/ckeditor/ckeditor.js"></script>
+    <title>BytsMaker</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="row nav">
+                <div class="col col-4 logo">
+                    <h1>BytsMaker</h1>
+                </div>
+                <div class="col col-4">
+                    <ul class="nav">
+                        <li class="nav-item"> <a class="nav-link active" aria-current="page" href="#">Inicio</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="#">SQL</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="#">Programacion</a></li>
+                    </ul>
+                </div>
+                <div class="col col-3 buscador align-content-center">
+                    <form action="" class="col-12 col-lg-auto mb-0 me-lg-5">
+                        <input type="search" name="" id="" class="form-control" placeholder="Buscar...">
+                    </form>
+                </div>
+
+                <div class="col col-1 main">
+                    <a href="#">
+                    <span>Ingresar </span><i class="fa-solid fa-right-to-bracket"></i>
+                    <div class="titulo">
+                        <div class="user" style="background-image: url(../Assets/img/sql.png);"></div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--Modal-->
+    <div class="modal modal-lg" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Publicacion</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="d-flex justify-content-center col-12" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/placeholder.jpg');width: 100%; height:250px;">
+                    <div class="">
+                        <label class="form-label text-white m-1" for="customFile1">Cambiar portada</label>
+                        <input type="file" class="form-control d-none" id="customFile1" accept="image/*" />
+                    </div>
+                </div>
+                <div class="text-1">
+                    <div class="col-6">
+                        <label for="recipient-name" class="col-form-label">Titulo</label>
+                        <input type="text" class="form-control" id="recipient-name">
+                      </div>
+                      <div class="col-4">
+                          <label for="recipient-name" class="col-form-label">Categoria</label>
+                          <select class="form-select" aria-label="Default select example">
+                              <option selected>Open this select menu</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select> 
+                        </div>
+                </div>
+                <div class="mb-12">
+                  <label for="message-text" class="col-form-label">Contenido:</label>
+                  <textarea class="form-control" id="message-text">TEXT.</textarea>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-primary">Actualizar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class="container">
+        <div class="row">
+<hr>
+            <div class="col-8">
+                <div class="public">
+                    <div class="titulo">
+                        <div class="user" style="background-image: url(../Assets/img/sql.jpg);"></div>
+                        <span>Sebastian Diaz</span>
+                        <div class="col-9">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap"  style="float: right;"><i class="fa-solid fa-pen-to-square"></i></button>
+                        </div>
+                    </div>
+                    <div class="card bg-dark text-white">
+                        <img src="../Assets/img/sql.jpg" class="card-img" alt="..." style="height: 250px; ">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">Actualizacion PHP 9</h5>
+                        </div>
+                    </div>
+                    <div class="post-text">
+                        <div class="category">
+                            <span>Programacion | 1 june 2020</span>
+                        </div>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus,
+                            quibusdam. Laborum sit nisi officiis, sapiente accusantium neque, accusamus magnam, natus
+                            adipisci omnis aliquid amet et facilis repudiandae. Amet, dicta magnam!
+                            Voluptas debitis, dolore autem quidem animi placeat ex. Labore sint provident cupiditate
+                            beatae non nemo corrupti expedita, fuga, amet ut dolores perspiciatis consequatur explicabo
+                            assumenda dicta similique quis placeat sit.
+                            
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, nostrum beatae. Adipisci dignissimos fugiat vero, quaerat repellat eligendi sint esse vitae eaque corporis? Expedita aut sequi repellendus velit iusto delectus.
+                            Similique, doloribus ad dolore, adipisci, quasi et ullam praesentium sunt hic quibusdam temporibus. Tenetur quasi perferendis non itaque alias, suscipit blanditiis velit at adipisci! Facere rem obcaecati qui ipsum amet.
+                            Inventore autem doloribus error cupiditate impedit natus? Amet, facilis? Dignissimos omnis minus saepe sapiente repellat nemo incidunt? Modi possimus vitae ullam officia voluptatibus. Quos expedita aliquid optio soluta corporis molestias.
+                            Ab soluta amet nulla, repudiandae id consequuntur voluptatem voluptatibus ullam odio dolore porro itaque exercitationem labore magni. Minima natus architecto voluptate? Totam quae pariatur tempora ipsam atque perferendis hic optio.
+                            Fugit, commodi error officia soluta velit itaque iste! Voluptate fuga sit expedita suscipit, cum distinctio sint eius officiis minus fugiat blanditiis repellendus corrupti nihil sed sequi ipsa explicabo at veniam.
+                            Animi accusamus provident dicta deserunt, illum rem, saepe natus expedita repellat harum, ducimus molestias aliquam iste architecto assumenda sunt optio. Aliquam necessitatibus cum eveniet atque quam sequi obcaecati voluptatum dolores?
+                            Repellat, nesciunt dolorum iste unde fugiat necessitatibus ex doloremque, expedita assumenda voluptatibus dolorem eos soluta tenetur! Sapiente libero commodi, temporibus ut distinctio magni, nemo pariatur, alias cum dignissimos laudantium omnis!
+                            Perspiciatis, ducimus quae? Saepe ipsum obcaecati aperiam debitis soluta dolores adipisci odio nam nemo consequuntur, repellat accusantium nesciunt, hic, error nulla explicabo commodi harum natus maxime omnis autem pariatur aut!
+                            Ut doloremque ipsa eos distinctio reprehenderit fuga maiores, delectus dignissimos qui exercitationem magni culpa voluptate quia quae quod nulla. Ratione harum sit quis cum aspernatur fugit numquam, quam nemo ex!
+                            Commodi quisquam soluta beatae, quod vel inventore rem nostrum repellat ipsa illo. Fuga a soluta fugiat nobis molestias eius. Temporibus minima vitae consequuntur. Harum mollitia illo ex, doloribus iure quasi.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="social">
+                    <strong>
+                        <h3>Nuestras redes sociales</h3>
+                    </strong>
+                    <ul class="list-group list-group-vertical">
+                        <li class="list-group-item"><i class="fa-brands fa-facebook"></i><a href="#"> Facebook</a></li>
+                        <li class="list-group-item"><i class="fa fa-twitter" aria-hidden="true"></i><a href="#">
+                                Twitter</a></li>
+                        <li class="list-group-item"><i class="fa-brands fa-linkedin"></i><a href="#"> LinKedin</a></li>
+                    </ul>
+                    <hr>
+                    <div class="post">
+                        <ul class="list-group list-group-vertical">
+                            <li class="list-group-item"><a href="#">
+                                    <dd class="col-sm-12">A description list is perfect for defining terms A description
+                                        list is perfect for defining terms.</dd>
+                                </a></li>
+                            <li class="list-group-item"><a href="#">
+                                    <dd class="col-sm-12">A description list is perfect for defining terms A description
+                                        list is perfect for defining terms.</dd>
+                            </li>
+                            <li class="list-group-item"><a href="#">
+                                    <dd class="col-sm-12">A description list is perfect for defining terms A description
+                                        list is perfect for defining terms.</dd>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <hr>
+        <!--Carrousel footer-->
+        <div class="row carrousel-noticias">
+            <div class="col-6">
+                <h3 class="mb-3">Noticias interesantes </h3>
+            </div>
+            <div class="col-6 text-right">
+                <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-slide="prev">
+                    <i class="fa fa-arrow-left"></i>
+                </a>
+                <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators2" role="button" data-slide="next">
+                    <i class="fa fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="col-12">
+                <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1532781914607-2031eca2f00d?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=7c625ea379640da3ef2e24f20df7ce8d">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Special title treatment</h4>
+                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=42b2d9ae6feb9c4ff98b9133addfb698">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Special title treatment</h4>
+                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=3d2e8a2039c06dd26db977fe6ac6186a">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Special title treatment</h4>
+                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1532771098148-525cefe10c23?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=3f317c1f7a16116dec454fbc267dd8e4">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Special title treatment</h4>
+                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1532715088550-62f09305f765?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=ebadb044b374504ef8e81bdec4d0e840">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Special title treatment</h4>
+                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=0754ab085804ae8a3b562548e6b4aa2e">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Special title treatment</h4>
+                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=ee8417f0ea2a50d53a12665820b54e23">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Special title treatment</h4>
+                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1532777946373-b6783242f211?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=8ac55cf3a68785643998730839663129">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Special title treatment</h4>
+                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1532763303805-529d595877c5?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=5ee4fd5d19b40f93eadb21871757eda6">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Special title treatment</h4>
+                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row suscribe justify-content-center">
+        <div class="col-auto">
+            <form>
+                <h3>¡Suscribite y recibe las ultimas noticias!</h3>
+                <p>Get the latest product updates, company news, and special offers delivered right to your inbox.</p>
+                <div class="row  justify-content-center">
+                    <div class="d-flex w-100 gap-2 form-email">
+                        <label for="newsletter1" class="visually-hidden">Email address</label>
+                        <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                        <button class="btn btn-primary" type="button">Subscribe</button>
+                      </div>
+                </div>
+              </form>
+        </div>
+    </div>
+    <hr>
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <h4>BytsMaker</h4> 
+    
+        <ul class="nav col-md-4 justify-content-center">
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+        </ul>
+
+        <ul class="nav col-auto justify-content-end list-unstyled d-flex">
+            <li class="ms-3"><i class="fa-brands fa-facebook"></i><a href="#"></a></li>
+            <li class="ms-3"><i class="fa fa-twitter" aria-hidden="true"></i><a href="#"></a></li>
+            <li class="ms-3"><i class="fa-brands fa-linkedin"></i><a href="#"></a></li>
+          </ul>
+      </footer>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function() {    
+                if(CKEDITOR) 
+                {
+                    // Replace the <textarea name = "content"> with a CKEditor instance. 
+                    CKEDITOR.replace('message-text');
+                }
+            });
+            </script>
+    </body>

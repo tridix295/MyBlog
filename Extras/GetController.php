@@ -22,6 +22,6 @@ if(!empty($ArrUrl[1])){
     for($i = 2; $i < count($ArrUrl); $i++){
         $Params .= $ArrUrl[$i] . ',';
     }
-
+    $Params = trim($Params,',');
 }
 ?>

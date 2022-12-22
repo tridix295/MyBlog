@@ -17,21 +17,20 @@
                 <div class="text-1">
                     <div class="col-6">
                         <label for="recipient-name" class="col-form-label">Titulo</label>
-                        <input type="text" class="form-control" id="recipient-name">
+                        <input type="text" class="form-control" id="recipient-name" value="<?=$data['data']['PoTitulo']?>">
                       </div>
                       <div class="col-4">
                           <label for="recipient-name" class="col-form-label">Categoria</label>
                           <select class="form-select" aria-label="Default select example">
-                              <option selected>Open this select menu</option>
-                              <option value="1">One</option>
-                              <option value="2">Two</option>
-                              <option value="3">Three</option>
+                            <?php foreach($data['Categoria'] as $key => $value):?>
+                              <option <?= $value['CaId'] == $data['data']['CaId'] ? 'selected' : '' ?> value="<?=$value['CaId']?>"><?=$value['CaNombre']?></option>
+                            <?php endforeach;?>
                             </select> 
                         </div>
                 </div>
                 <div class="mb-12">
                   <label for="message-text" class="col-form-label">Contenido:</label>
-                  <textarea class="form-control" id="message-text">TEXT.</textarea>
+                  <textarea class="form-control" id="message-text"><?=$data['data']['PotText']?></textarea>
                 </div>
               </form>
             </div>

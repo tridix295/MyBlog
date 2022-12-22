@@ -1,7 +1,7 @@
 <?php 
 
 //Clase principal el cual va a heredar la clase padre del controlador base
-class Home extends baseController{
+class Home extends BaseController{
     public function __construct()
     {
       parent::__construct();
@@ -13,7 +13,9 @@ class Home extends baseController{
         *@this -> Le pasamos el objecto $Home que la esta llamando
         *@home -> Nombre del archivo donde esta almacenado la vista.
         */
-       echo $this->View->getView($this,'Home');
+       $Request = $this->model->getPost();
+       $this->View->getView($this,'Home',$Request);
+       
     }
 }
 
