@@ -1,10 +1,16 @@
 <?php 
 require_once $PathApp . '/Extras/GetController.php';
+require_once $PathApp . '/Extras/autoload.php';
 
-//Definimos la ruta del controlador que estaremos llamado.
+//Definimos la ruta del controlador que estaremos llamado mediante la url.
 $ControllerFile = $PathApp . '/App/Htpp/' . $Controller . '.php';
 
-if(!file_exists($ControllerFile)){ die($Warning_Message['WN-NF-001'] . $ControllerFile); }
+if(!file_exists($ControllerFile)){
+        $error = $Warning_Message['WN-NF-001'] . $ControllerFile;
+        LogSystem("/Logs/LlamarRecurso",$error);
+        include $PathApp . '/Views/Errors/404.html';
+        die();
+    }
 
 require_once $ControllerFile;
 
@@ -12,7 +18,10 @@ require_once $ControllerFile;
 // nombre de la clase debe ser igual al nombre del archivo
 $Controller = new $Controller();
 
-if(!method_exists($Controller,$Method)){die($Warning_Message['WN-MT-001']);}
+if(!method_exists($Controller,$Method)){
+    include $PathApp . '/Views/Errors/alerta.html';
+    die();
+}
 
-$Controller->{$Method}($Param);
+$Controller->{$Method}($Params);
 ?>
